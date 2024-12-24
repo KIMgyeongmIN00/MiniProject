@@ -8,11 +8,11 @@
     <title>Document</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <link rel="stylesheet" href="styles.css">
-    <script src="script.js"></script>
-</head>
-<script>
 
-</script>
+</head>
+
+<script type="module" src="script.js"></script>
+
 
 <body>
     <div id="wrapping">
@@ -31,37 +31,21 @@
                 <li><a href="">News</a></li>
             </ul>
         </div>
-        <form action="introAction" class="intro_mid">
-            <div class="introWrapping">
-                <p class="introImg"><img src="images/char1.png" alt="내 아바타 소개"></p>
-                <p>이름</p>
-                <p><label><input type="text" name="eq1" value="입력하세요"></label></p>
-                <p>Blog.Git</p>
-            </div>
-            <div class="introWrapping">
-                <p class="introImg"><img src="images/char2.png" alt="내 아바타 소개"></p>
-                <p>이름</p>
-                <p><label><input type="text" name="eq1" value="입력하세요"></label></p>
-                <p>Blog.Git</p>
-            </div>
-            <div class="introWrapping">
-                <p class="introImg"><img src="images/char3.png" alt="내 아바타 소개"></p>
-                <p>이름</p>
-                <p><label><input type="text" name="eq1" value="입력하세요"></label></p>
-                <p>Blog.Git</p>
-            </div>
-            <div class="introWrapping">
-                <p class="introImg"><img src="images/char4.png" alt="내 아바타 소개"></p>
-                <p>이름</p>
-                <p><label><input type="text" name="eq1" value="입력하세요"></label></p>
-                <p>Blog.Git</p>
-            </div>
-            <div class="introWrapping">
-                <p class="introImg"><img src="images/char5.png" alt="내 아바타 소개"></p>
-                <p>이름</p>
-                <p><label><input type="text" name="eq1" value="입력하세요"></label></p>
-                <p>Blog.Git</p>
-            </div>
+
+        <div id="input">
+            <div><input id="image" type="file"><label>이미지</label></div>
+            <div><input id="name" type="text"><label>이름</label></div>
+            <div><input id="blog" type="text"><label>블로그</label></div>
+            <div><input id="github" type="text"><label>깃허브</label></div>
+            <div><input id="scontent" type="text"><label>한줄소개</label></div>
+            <div><input id="bcontent" type="text"><label>여러줄소개</label></div>
+            <div><input id="mbti" type="text"><label>MBTI</label></div>
+            <div><button id="joinbtn" type="button" onclick=add()>합류하기</button></div>
+        </div>
+
+        <form action="introAction" class="intro_mid" id="memebercard">
+
+
         </form>
     </div>
 
