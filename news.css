@@ -1,6 +1,6 @@
+* {font-family: 'IBM Plex Serif';}
 body {
   margin: 0;
-  font-family: 'IBM Plex Serif';
 }
 
 a {
@@ -81,8 +81,8 @@ li {
   transition: transform 250ms;
 }
 
-/* team 페이지에서 선택된 상태 */
-.navbar_menu li:nth-child(1) {
+/* news 페이지에서 선택된 상태 */
+.navbar_menu li:nth-child(4) {
   transform: translateY(-8px);
   scale: 120%;
   font-weight: bold;
@@ -91,8 +91,8 @@ li {
   font-weight: 600;
   transition: transform 250ms;
 }
-
-#team{
+/* 선택된 페이지 a */
+#news{
   color: rgb(24, 65, 209);
 }
 
@@ -107,3 +107,110 @@ li {
 .navbar_menu a:hover {
   color: rgb(24, 65, 209);
 }
+
+/* main */
+main {
+  /* background-color: aquamarine; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container {
+  width: 80%;
+  margin-top: 30px;
+  padding: 20px;
+  border: 1px rgba(27, 146, 255, 1);
+  border-radius: 8px;
+  box-shadow: 0px 0px 4px rgba(27, 146, 255, 1);
+  /* background-color: rgb(216, 216, 21); */
+  display: flex;
+  flex-direction: row;
+  flex-flow: column nowrap;
+  align-items: stretch;
+  justify-content: center;
+}
+
+.news-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.newsserch {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  /* align-items: center; */
+  padding: 8px;
+  font-family: 'Gowun Dodum';
+  margin: 0px;
+}
+
+h1 {
+  font-family: "Gowun Dodum", serif;
+  margin: 0px 0px  16px;
+  font-size: 34px;
+}
+
+.search-box {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 20px;
+}
+
+#searchButton {
+  margin-left: 10px;
+}
+
+#searchKeyword{
+  height: 40px;
+  width: 70%;
+  padding: 1px 10px;
+  border: 1px solid #0Dcaf0;
+}
+
+.news-item {
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.news-item h2 {
+  font-size: 26px;
+  margin-top: 0;
+  color: #333;
+}
+
+.news-item p {
+  color: #555;
+}
+
+.headline {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+
+/* 미디어 쿼리 */
+@media screen and (max-width:756px){
+  
+  .header_logo {
+    flex-wrap: wrap;
+  }
+  .logo_title {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .logo_title span{
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+}
+
+
