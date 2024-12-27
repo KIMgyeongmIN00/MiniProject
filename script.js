@@ -76,36 +76,35 @@ if (!querySnapshot.empty) {
                 </p>
         <div class="">
             <p contenteditable="false" class="editable URL" data-field="image" data-id="${docId}" placeholder="사진" style="display:none">${image}</p>
-            <label for="Image">사진</label>
         </div>
         <div class="">
-            <p contenteditable="false" class="editable " data-field="name" data-id="${docId}" placeholder="이름">${name}</p>
             <label for="Name">이름</label>
+            <p contenteditable="false" class="editable " data-field="name" data-id="${docId}" placeholder="이름">${name}</p>
         <div class="">
-            <p contenteditable="false" class="editable " data-field="mbti" data-id="${docId}" placeholder="MBTI">${mbti}</p>
             <label for="modMbti">MBTI</label>
+            <p contenteditable="false" class="editable " data-field="mbti" data-id="${docId}" placeholder="MBTI">${mbti}</p>
         </div>
         </div>
         <div class="">
-            <p contenteditable="false" class="editable " data-field="scontent" data-id="${docId}" placeholder="간단 소개">${scontent}</p>
             <label for="modScon">간단 소개</label>
+            <p contenteditable="false" class="editable " data-field="scontent" data-id="${docId}" placeholder="간단 소개">${scontent}</p>
         </div>
         <div class="">
-            <p contenteditable="false" class="editable " data-field="blog" data-id="${docId}" placeholder="블로그 주소">${blog}</p>
             <label for="modBlog">블로그 주소</label>
+            <p contenteditable="false" class="editable " data-field="blog" data-id="${docId}" placeholder="블로그 주소">${blog}</p>
         </div>
         <div class="">
-            <p contenteditable="false" class="editable " data-field="github" data-id="${docId}" placeholder="git 주소">${github}</p>
             <label for="modGithub">github 주소</label>
+            <p contenteditable="false" class="editable " data-field="github" data-id="${docId}" placeholder="git 주소">${github}</p>
         </div>
         <div class="">
-            <p contenteditable="false" class="editable " data-field="bcontent" data-id="${docId}" placeholder="자기 소개">${bcontent}</p>
             <label for="modBcon">자기 소개</label>
+            <p contenteditable="false" class="editable " data-field="bcontent" data-id="${docId}" placeholder="자기 소개">${bcontent}</p>
         </div>
-        <button class="extendBtn"  data-index='${idx}'>확장</button>
-        <button class="editBtn" data-id="${docId}" placeholder="사진">수정</button>
-        <button class="saveBtn" data-id="${docId}" style="display:none;" placeholder="사진">수정완료</button>
-        <button class="deleteBtn" data-id="${docId}" placeholder="사진">삭제</button>
+        <button class="extendBtn fa-solid fa-maximize"  data-index='${idx}'><i></i></button>
+        <button class="editBtn fa-solid fa-pen-to-square" data-id="${docId}" placeholder="사진"><i></i></button>
+        <button class="saveBtn fa-solid fa-floppy-disk" data-id="${docId}" style="display:none;" placeholder="사진"><i></i></button>
+        <button class="deleteBtn fa-solid fa-trash" data-id="${docId}" placeholder="사진"><i></i></button>
         </div>
         </div>`;
 

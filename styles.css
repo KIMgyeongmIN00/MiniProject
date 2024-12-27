@@ -150,15 +150,122 @@ main {
   }
 }
 
-.card:nth-child(odd) .edit-delete-buttons {
-  right: 10px; /* 홀수 인덱스 카드에서 오른쪽 위치 */
+.card.opened {
+    width: 100%;
+    max-width: inherit;
+    height: auto;
+    border: 2px solid #000;
+    border-radius: 8px;
+    padding: 16px;
+    margin: 16px auto;
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.1);
+    grid-gap: 12px;
+    grid-template-columns: 1fr 2fr 2fr 1fr;
+    transition: all 0.3s ease-in-out;
+    flex-wrap: nowrap;
 }
 
-.card:nth-child(even) .edit-delete-buttons {
-  left: 10px; /* 짝수 인덱스 카드에서 왼쪽 위치 */
+.card {
+    width: 100%;
+    max-width: inherit;
+    height: 300px;
+    border: 2px solid #000;
+    border-radius: 8px;
+    padding: 16px;
+    margin: 16px auto;
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.1);
+    grid-gap: 12px;
+    grid-template-columns: 1fr 2fr 2fr 1fr;
+    transition: all 0.3s ease-in-out;
+    flex-wrap: nowrap;
+}
+
+/* 이미지 섹션 */
+.card .image {
+    grid-area: image;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffe08a;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    padding: 8px;
+    text-align: center;
+    font-weight: bold;
+}
+
+
+.odd {
+    align-items: flex-start;
+    text-align: left;
+    margin-left: 0;
+    margin-right: auto;
+}
+
+.even {
+    align-items: flex-end;
+    text-align: right;
+    margin-left: auto;
+    margin-right: 0;
 }
 
 img {
     width : 150px;
     height : 150px;
+}
+
+.opened img{
+    width: 250px;
+    height: 250px;
+}
+
+#input {
+    display : none;
+}
+
+.extendBtn{
+    
+}
+
+.odd .extendBtn{
+    position: absolute; /* 카드 안에서 고정 */
+    top: 8px; /* 카드 상단에서 8px */
+    right: 8px; /* 카드 오른쪽에서 8px */
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.odd .extendBtn{
+    position: absolute; /* 카드 안에서 고정 */
+    top: 8px; /* 카드 상단에서 8px */
+    right: 8px; /* 카드 오른쪽에서 8px */
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.odd .extendBtn{
+    position: absolute; /* 카드 안에서 고정 */
+    top: 8px; /* 카드 상단에서 8px */
+    right: 8px; /* 카드 오른쪽에서 8px */
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.odd{
+    width: 100%;
+    overflow: hidden;
+}
+
+.even{
+    width: 100%;
+    overflow: hidden;
+}
+
+.editable label {
+    display: none;
 }
