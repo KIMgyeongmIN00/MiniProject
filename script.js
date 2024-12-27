@@ -99,7 +99,7 @@ if (!querySnapshot.empty) {
             <label for="modGithub">github 주소</label>
         </div>
         <div class="">
-            <p contenteditable="false" class="editable form-control" data-field="bcontent" data-id="${docId}" placeholder="자기 소개">${bcontent}</p>
+            <p contenteditable="false" class="editable " data-field="bcontent" data-id="${docId}" placeholder="자기 소개">${bcontent}</p>
             <label for="modBcon">자기 소개</label>
         </div>
         <button class="extendBtn"  data-index='${idx}'>확장</button>
@@ -138,6 +138,7 @@ document.querySelectorAll('.editBtn').forEach((edit) => {   // editbtn 클래스
 
         editableFields.forEach((field) => {
             field.setAttribute('contenteditable', 'true');   // contenteditable 로 true 요소를 편집 가능하게 함
+            field.classList.add('form-control');   // editable 클래스가 있는 요소에 form-control 클래스 추가
         });
 
         card.querySelector('.URL').style.display = 'block'   // image 주소가 적혀있는 박스를 block
@@ -171,6 +172,7 @@ document.querySelectorAll('.saveBtn').forEach((save) => {   // savebtn 클래스
 
         editableFields.forEach((field) => {
             field.setAttribute('contenteditable', 'false');   // false 로 수정 비활성화
+            field.classList.remove('form-control'); // form-control 클래스 제거
         });
 
         card.querySelector('.URL').style.display = 'none'   // image 주소가 적혀있는 필드를 숨김

@@ -1,10 +1,164 @@
-.opened{
-    background-color: green;
-    transition: 1s;
-    height: 1500px;
+* {
+  font-family: "IBM Plex Serif";
+}
+body {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: rgba(27, 146, 255, 1);
+}
+
+li {
+  list-style: none;
+}
+
+/* header */
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.header_logo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 16px;
+}
+
+.header_logo i {
+  font-size: 30px;
+  color: rgba(27, 146, 255, 1);
+}
+
+.header_logo span {
+  margin: 0px auto 0px 10px;
+  font-size: 24px;
+  color: #303030;
+  font-family: "Gowun Dodum", serif;
+  font-weight: bold;
+}
+
+/* right links */
+.header_links {
+  font-size: 24px;
+  display: flex;
+  flex-direction: row;
+  margin: 16px;
+  padding: 0px;
+}
+
+.header_links li {
+  margin-left: 10px;
+}
+
+.header_links li a i {
+  color: rgba(27, 146, 255, 1);
+}
+
+/* navbar */
+.navbar {
+  /* background-color: yellowgreen; */
+  display: flex;
+  flex-direction: row;
+  align-self: flex-end;
+}
+
+.navbar_menu {
+  /* background-color: yellow; */
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0px;
+  margin: 0px 16px;
+}
+
+.navbar_menu li {
+  padding: 10px 16px;
+  font-size: 24px;
+  font-weight: 600;
+  transition: transform 250ms;
+}
+
+/* news 페이지에서 선택된 상태 */
+.navbar_menu li:nth-child(2) {
+  transform: translateY(-8px);
+  scale: 120%;
+  font-weight: bold;
+  padding: 10px 16px;
+  font-size: 24px;
+  font-weight: 600;
+  transition: transform 250ms;
+}
+/* 선택된 페이지 a */
+#members {
+  color: rgb(24, 65, 209);
+}
+
+/* 다른 메뉴들 선택시 */
+.navbar_menu li:hover {
+  transform: translateY(-8px);
+
+  scale: 120%;
+  font-weight: bold;
+}
+
+.navbar_menu a:hover {
+  color: rgb(24, 65, 209);
+}
+
+/* main */
+main {
+  /* background-color: aquamarine; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#cardSlot {
+  width: 80%;
+  margin-top: 30px;
+  padding: 20px;
+  border: 1px rgba(27, 146, 255, 1);
+  border-radius: 8px;
+  box-shadow: 0px 0px 4px rgba(27, 146, 255, 1);
+  /* background-color: rgb(216, 216, 21); */
+  display: flex;
+  flex-direction: row;
+  flex-flow: column nowrap;
+  align-items: stretch;
+  justify-content: center;
+}
+
+
+/* 미디어 쿼리 */
+@media screen and (max-width: 756px) {
+  .header_logo {
+    flex-wrap: wrap;
+  }
+  .logo_title {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .logo_title span {
+    font-size: 20px;
+    font-weight: bold;
+  }
+}
+
+.card:nth-child(odd) .edit-delete-buttons {
+  right: 10px; /* 홀수 인덱스 카드에서 오른쪽 위치 */
+}
+
+.card:nth-child(even) .edit-delete-buttons {
+  left: 10px; /* 짝수 인덱스 카드에서 왼쪽 위치 */
 }
 
 img {
-    width: 250px;
-    height: 250px;
+    width : 150px;
+    height : 150px;
 }
