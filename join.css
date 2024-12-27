@@ -81,7 +81,7 @@ li {
   transition: transform 250ms;
 }
 
-/* news 페이지에서 선택된 상태 */
+/* join 페이지에서 선택된 상태 */
 .navbar_menu li:nth-child(3) {
   transform: translateY(-8px);
   scale: 120%;
@@ -146,3 +146,22 @@ input {
     border-radius: 5px
 }
 .d-grid{margin-top:30px;}
+
+
+/* 미디어 쿼리 */
+@media screen and (max-width:756px){
+  
+  .header_logo {
+    flex-wrap: wrap;
+  }
+  .logo_title {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .logo_title span{
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+}
