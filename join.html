@@ -69,41 +69,49 @@
     <!-- content -->
     <main>
       <div id="container">
-        <form action="joinAction">
-        <div class="box">
+        <form>
+          <div class="box">
             <div class="input-group mb-3">
-                <span class="input-group-text" id="basic-addon1">이름이 뭐예요?</span>
-                <input id="name" type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
-              </div>
-              <div class="input-group mb-3">
-                <span class="input-group-text" id="basic-addon1">MBTI</span>
-                <input id="mbti" type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
-              </div>
-              <div class="input-group mb-3">
-                <input type="text" class="form-control" placeholder="UserID" aria-label="Username">
-                <span class="input-group-text">@</span>
-                <input type="text" class="form-control" placeholder="EmailServer" aria-label="EmailServer">
-              </div>
-              <div class="input-group mb-3">
-                <span class="input-group-text" id="basic-addon1">간단한 소개</span>
-                <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
-              </div>
-              <div class="input-group">
-                <span class="input-group-text">자세한 소개</span>
-                <textarea class="form-control" aria-label="With textarea"></textarea>
-              </div>
-                    <label for="joinInput">긴 소개내용을 넣을까요? 저의 5조의 서기를 했구요~
-                        JS는 다른분이 할꺼에요~ CSS 화이팅!</label>
-                </div>
-            <!--클래스 info로 소개부분을 묶어준다.-->
-            <div class="d-grid gap-2">
-                <button id="joinbtn" class="btn btn-primary" type="button">합류하기</button>
-              </div>
+              <span class="input-group-text">사진</span>
+              <input id="image" type="text" class="form-control" placeholder="Photo">
+            </div>
+            <div class="input-group mb-3">
+              <span class="input-group-text">이름이 뭐예요?</span>
+              <input id="name" type="text" class="form-control" placeholder="Username">
+            </div>
+            <div class="input-group mb-3">
+              <span class="input-group-text">MBTI</span>
+              <input id="mbti" type="text" class="form-control" placeholder="MBTI">
+            </div>
+            <div class="input-group mb-3">
+              <span class="input-group-text">블로그 주소</span>
+              <input id="blog" type="text" class="form-control" placeholder="Blog">
+            </div>
+            <div class="input-group mb-3">
+              <span class="input-group-text">Git 주소</span>
+              <input id="github" type="text" class="form-control" placeholder="GitHub">
+            </div>
+            <div class="input-group mb-3">
+              <span class="input-group-text">간단한 소개</span>
+              <input id="scontent" type="text" class="form-control" placeholder="간단한 소개를 해주세요">
+            </div>
+            <div class="input-group">
+              <span class="input-group-text">자세한 소개</span>
+              <textarea id="bcontent" class="form-control" placeholder="자세한 소개를 해주세요"></textarea>
+            </div>
+            <label>
+              예시 : 긴 소개내용을 넣을까요? 저는 5조의 서기를 했구요~
+              JS는 다른분이 할꺼에요~ CSS 화이팅!
+            </label>
+          </div>
+          <div class="d-grid gap-2">
+            <button id="joinbtn" class="btn btn-primary" type="button">제출하기</button>
+          </div>
+        </form>
         </div>
         <!--클래스 전체를 col로 한번 묶어준다.-->
-      </form>
     </main>
-    <script src="join.js"></script>
+    <script src="join.js" type="module"></script>
 
 </body>
 </html>
