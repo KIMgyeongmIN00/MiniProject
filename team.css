@@ -139,7 +139,6 @@ main {
   padding: 8px;
   font-family: 'Gowun Dodum';
   font-size: 28px;
-
 }
 
 .accordion-header button {
@@ -184,60 +183,3 @@ main {
     align-items: center;
   }
 }
-/* .cards {
-  position: relative;
-  top: 0px;
-  height: 10%;
-  border-radius: 4px;
-  padding: 10px;
-  background-color: white;
-  transition: 0.4s ease-in-out;
-  font-size: medium;
-  position: relative;
-  overflow: hidden;
-  animation: fadein 1.5s ease-in-out;
-} */
-
-/* .cards:nth-child(1):hover {
-  background-color: rgba(27, 146, 255, 1);
-}
-.cards:nth-child(2):hover {
-  background-color: #ff9950;
-}
-.cards:nth-child(3):hover {
-  background-color: #aaec8a;
-}
-.cards:nth-child(4):hover {
-  background-color: #ed6a5e;
-}
-.cards:nth-child(5):hover {
-  background-color: #99c2fe;
-} */
-
-/* .cards:hover {
-  background-color: brown;
-  flex-grow: 3;
-  font-weight: 400;
-  cursor: pointer;
-} */
-
-/* .cards{
-  font-size: medium;
-  position: relative;
-  overflow: hidden;
-  animation: fadein 1s ease-in-out;
-} */
-
-
-/* @keyframes cards{
-  0% {
-    opacity: 0;
-    transform: translateX(20px);
-  }
-  100% {
-    opacity: 1;
-    transform: none;
-  }
-} */
-
-/* test */
