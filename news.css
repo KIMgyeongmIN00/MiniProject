@@ -1,0 +1,109 @@
+body {
+  margin: 0;
+  font-family: 'IBM Plex Serif';
+}
+
+a {
+  text-decoration: none;
+  color: rgba(27, 146, 255, 1);
+}
+
+li {
+  list-style: none;
+}
+
+/* header */
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.header_logo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 16px ;
+}
+
+.header_logo i {
+  font-size: 30px;
+  color: rgba(27, 146, 255, 1);
+}
+
+.header_logo span {
+  margin: 0px auto 0px 10px;
+  font-size: 24px;
+  color: #303030;
+  font-family: "Gowun Dodum", serif;
+  font-weight: bold;
+}
+
+/* right links */
+.header_links {
+  font-size: 24px;
+  display: flex;
+  flex-direction: row;
+  margin: 16px;
+  padding: 0px;
+}
+
+.header_links li {
+  margin-left: 10px;
+}
+
+.header_links li a i {
+  color: rgba(27, 146, 255, 1);
+}
+
+/* navbar */
+.navbar {
+  /* background-color: yellowgreen; */
+  display: flex;
+  flex-direction: row;
+  align-self: flex-end;
+}
+
+.navbar_menu{
+  /* background-color: yellow; */
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0px;
+  margin: 0px 16px;
+}
+
+.navbar_menu li {
+  padding: 10px 16px;
+  font-size: 24px;
+  font-weight: 600;
+  transition: transform 250ms;
+}
+
+/* team 페이지에서 선택된 상태 */
+.navbar_menu li:nth-child(1) {
+  transform: translateY(-8px);
+  scale: 120%;
+  font-weight: bold;
+  padding: 10px 16px;
+  font-size: 24px;
+  font-weight: 600;
+  transition: transform 250ms;
+}
+
+#team{
+  color: rgb(24, 65, 209);
+}
+
+/* 다른 메뉴들 선택시 */
+.navbar_menu li:hover {
+  transform: translateY(-8px);
+
+  scale: 120%;
+  font-weight: bold;
+}
+
+.navbar_menu a:hover {
+  color: rgb(24, 65, 209);
+}
