@@ -11,6 +11,9 @@
 
 </head>
 
+<script type="module" src="script.js"></script>
+
+
 <body>
     <div id="wrapping">
         <div class="circle">
@@ -30,36 +33,22 @@
         </div>
 
         <div id="input">
-            <div><input id="image" type="text"><label>이미지</label></div>
+            <div><input id="image" type="file"><label>이미지</label></div>
             <div><input id="name" type="text"><label>이름</label></div>
             <div><input id="blog" type="text"><label>블로그</label></div>
             <div><input id="github" type="text"><label>깃허브</label></div>
             <div><input id="scontent" type="text"><label>한줄소개</label></div>
             <div><input id="bcontent" type="text"><label>여러줄소개</label></div>
             <div><input id="mbti" type="text"><label>MBTI</label></div>
-            <div><button id="joinbtn">합류하기</button></div>
+            <div><button id="joinbtn" type="button" onclick=add()>합류하기</button></div>
         </div>
 
-        <div id="modi">
-            <div><input id="modImage" type="text"><label>이미지수정</label></div>
-            <div><input id="modName" type="text"><label>이름수정</label></div>
-            <div><input id="modBlog" type="text"><label>블로그수정</label></div>
-            <div><input id="modGithub" type="text"><label>깃허브수정</label></div>
-            <div><input id="modScon" type="text"><label>한줄소개수정</label></div>
-            <div><input id="modBcon" type="text"><label>여러줄소개수정</label></div>
-            <div><input id="modMbti" type="text"><label>MBTI수정</label></div>
-            <div><button id="modifybtn">합류하기</button></div>
-        </div>
+        <form action="introAction" class="intro_mid" id="memebercard">
 
-        <div id="cardSlot"></div>
 
+        </form>
     </div>
-<script type="module" src="./script.js">
-</script>
 
 </body>
-
-
-
 
 </html>
