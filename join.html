@@ -69,15 +69,15 @@
     <!-- content -->
     <main>
       <div id="container">
-    <form action="joinAction">
+        <form action="joinAction">
         <div class="box">
             <div class="input-group mb-3">
                 <span class="input-group-text" id="basic-addon1">이름이 뭐예요?</span>
-                <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+                <input id="name" type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
               </div>
               <div class="input-group mb-3">
                 <span class="input-group-text" id="basic-addon1">MBTI</span>
-                <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+                <input id="mbti" type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
               </div>
               <div class="input-group mb-3">
                 <input type="text" class="form-control" placeholder="UserID" aria-label="Username">
@@ -97,12 +97,12 @@
                 </div>
             <!--클래스 info로 소개부분을 묶어준다.-->
             <div class="d-grid gap-2">
-                <button class="btn btn-primary" type="button">제출하기</button>
+                <button id="joinbtn" class="btn btn-primary" type="button">합류하기</button>
               </div>
         </div>
         <!--클래스 전체를 col로 한번 묶어준다.-->
-    </form>
-
+      </form>
+    </main>
     <script src="join.js"></script>
 
 </body>
