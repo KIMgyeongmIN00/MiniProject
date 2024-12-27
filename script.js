@@ -174,8 +174,8 @@ document.querySelectorAll('.saveBtn').forEach((save) => {   // savebtn 클래스
         });
 
         card.querySelector('.URL').style.display = 'none'   // image 주소가 적혀있는 필드를 숨김
-        card.querySelector('.savebtn').style.display = 'none';   // 완료 버튼 숨김
-        card.querySelector('.editbtn').style.display = 'inline-block';   // 수정 버튼 보이기
+        card.querySelector('.saveBtn').style.display = 'none';   // 완료 버튼 숨김
+        card.querySelector('.editBtn').style.display = 'inline-block';   // 수정 버튼 보이기
 
         alert('수정이 완료되었습니다!');
     });
