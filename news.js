@@ -9,7 +9,8 @@ function getCurrentDate() {
 
 // API 키와 기본 URL 설정
 const apiKey = '240d7a5da123430cad5ba6d2b09fd571';  // API 키
-const urlTemplate = (keyword) => `https://newsapi.org/v2/everything?q=${keyword}&sortBy=popularity&pageSize=5&apiKey=${apiKey}`;  // 날짜 기준 없이 최근 뉴스 검색
+const proxyUrl = 'https://cors-anywhere.herokuapp.com/';  // CORS 우회 서비스
+const urlTemplate = (keyword) => `${proxyUrl}https://newsapi.org/v2/everything?q=${keyword}&sortBy=popularity&pageSize=5&apiKey=${apiKey}`;  // 날짜 기준 없이 최근 뉴스 검색
 
 // 뉴스 데이터를 HTML로 생성하는 함수
 function displayNews(articles) {
