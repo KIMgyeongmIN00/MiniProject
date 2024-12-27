@@ -47,8 +47,8 @@ function displayNews(articles) {
     });
 }
 
-// 검색 버튼 클릭 시 실행되는 함수
-document.getElementById('searchButton').addEventListener('click', () => {
+// 검색 요청 실행 함수
+function searchNews() {
     const keyword = document.getElementById('searchKeyword').value.trim();  // 입력된 키워드 가져오기
 
     if (!keyword) {
@@ -77,4 +77,14 @@ document.getElementById('searchButton').addEventListener('click', () => {
         .catch(error => {
             alert('뉴스를 가져오는 데 실패했습니다');
         });
+}
+
+// 검색 버튼 클릭 시 실행되는 함수
+document.getElementById('searchButton').addEventListener('click', searchNews);
+
+// 입력창에서 Enter 키 눌렀을 때도 검색이 되게 하는 이벤트 리스너
+document.getElementById('searchKeyword').addEventListener('keyup', function(event) {
+    if (event.key === 'Enter') {
+        searchNews();  // Enter 키로 검색
+    }
 });
