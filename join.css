@@ -1,6 +1,8 @@
 * {font-family: 'IBM Plex Serif';}
-body {
+bbody {
   margin: 0;
+  font-family: 'IBM Plex Serif';
+  
 }
 
 a {
@@ -13,7 +15,20 @@ li {
 }
 
 /* header */
+header {
+  /* background-color: cadetblue; */
+  display: flex;
+  justify-content: center;
+}
+
+#headercontainer {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+}
+
 .header {
+  width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -24,6 +39,11 @@ li {
   flex-direction: row;
   align-items: center;
   margin: 16px ;
+}
+
+/* add */
+.header_logo:hover {
+  cursor: pointer;
 }
 
 .header_logo i {
@@ -56,9 +76,15 @@ li {
   color: rgba(27, 146, 255, 1);
 }
 
+/* add */
+.header_links li a i:hover {
+  color: rgb(24, 65, 209);
+}
+
 /* navbar */
 .navbar {
   /* background-color: yellowgreen; */
+  width:100%;
   display: flex;
   flex-direction: row;
   align-self: flex-end;
@@ -66,7 +92,7 @@ li {
 
 .navbar_menu{
   /* background-color: yellow; */
-  width: 100vw;
+  width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -74,6 +100,7 @@ li {
   margin: 0px 16px;
 }
 
+/* join us text fix */
 .navbar_menu li {
   padding: 10px 16px;
   font-size: 24px;
@@ -111,6 +138,8 @@ li {
 /* main */
 main {
   /* background-color: aquamarine; */
+  background: linear-gradient( white 50%, rgba(27, 146, 255, 1) 50%);
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -124,11 +153,13 @@ main {
   border-radius: 8px;
   box-shadow: 0px 0px 4px rgba(27, 146, 255, 1);
   /* background-color: rgb(216, 216, 21); */
+  background-color: white;
   display: flex;
   flex-direction: row;
   flex-flow: column nowrap;
   align-items: stretch;
-  justify-content: center;
+  justify-content: space-around;
+  gap: 4px;
 }
 
 .teamname {
@@ -147,7 +178,13 @@ main {
 .input-group-text {
   width: 110px ;
   font-family: "Gowun Dodum", serif;
-  background-color: #0dcaf06b;
+  /* background-color: #0dcaf06b; */
+  background-color: #cfe2ff;
+  border: 1px solid #cfe2ff;
+}
+
+.input-group-text i {
+  margin-right: 5px;
 }
 
 input {
@@ -160,27 +197,29 @@ input {
 ::placeholder {
   font-size: 14px;
   text-align: left;
-  color: #5f5f5f;
+  color: #7a7a7a;
 }
 
 .form-control {
-  background: #0dcaf008;
-  border: 1px solid #0Dcaf0;
+  /* background: #0dcaf008; */
+  background: #cfe2ff2f;
+  /* border: 1px solid #0Dcaf0; */
+  border: 1px solid #cfe2ff;
 }
 
 #joinbtn {
   font-size: 20px;
   color: #303030;
   font-family: "Gowun Dodum", serif;
-  background: #0dcaf09f;
+  background: #cfe2ff;
+  border: 1px solid #cfe2ff;
+  margin-top: 30px;
 }
 
 #joinbtn:hover {
-  background: #0Dcaf0;
+  /* background: #a4c9ff; */
+  background: rgba(27, 145, 255, 0.816);
 }
-
-.d-grid{margin-top:30px;}
-
 
 /* 미디어 쿼리 */
 @media screen and (max-width:756px){

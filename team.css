@@ -1,6 +1,8 @@
+/* * {font-family: 'IBM Plex Serif';} */
 body {
   margin: 0;
   font-family: 'IBM Plex Serif';
+  
 }
 
 a {
@@ -13,7 +15,20 @@ li {
 }
 
 /* header */
+header {
+  /* background-color: cadetblue; */
+  display: flex;
+  justify-content: center;
+}
+
+#headercontainer {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+}
+
 .header {
+  width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -24,6 +39,11 @@ li {
   flex-direction: row;
   align-items: center;
   margin: 16px ;
+}
+
+/* add */
+.header_logo:hover {
+  cursor: pointer;
 }
 
 .header_logo i {
@@ -56,9 +76,15 @@ li {
   color: rgba(27, 146, 255, 1);
 }
 
+/* add */
+.header_links li a i:hover {
+  color: rgb(24, 65, 209);
+}
+
 /* navbar */
 .navbar {
   /* background-color: yellowgreen; */
+  width:100%;
   display: flex;
   flex-direction: row;
   align-self: flex-end;
@@ -66,7 +92,7 @@ li {
 
 .navbar_menu{
   /* background-color: yellow; */
-  width: 100vw;
+  width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -74,6 +100,7 @@ li {
   margin: 0px 16px;
 }
 
+/* join us text fix */
 .navbar_menu li {
   padding: 10px 16px;
   font-size: 24px;
@@ -91,7 +118,7 @@ li {
   font-weight: 600;
   transition: transform 250ms;
 }
-
+/* 선택된 페이지 a */
 #team{
   color: rgb(24, 65, 209);
 }
@@ -111,12 +138,14 @@ li {
 /* main */
 main {
   /* background-color: aquamarine; */
+  background: linear-gradient( white 50%, rgba(27, 146, 255, 1) 50%);
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-#container {
+.container {
   width: 80%;
   margin-top: 30px;
   padding: 20px;
@@ -124,6 +153,7 @@ main {
   border-radius: 8px;
   box-shadow: 0px 0px 4px rgba(27, 146, 255, 1);
   /* background-color: rgb(216, 216, 21); */
+  background-color: white;
   display: flex;
   flex-direction: row;
   flex-flow: column nowrap;
@@ -137,7 +167,7 @@ main {
   flex-direction: row;
   justify-content: center;
   padding: 8px;
-  font-family: 'Gowun Dodum';
+  font-family: "Gowun Dodum", serif;
   font-size: 28px;
 }
 

@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- icon -->
     <script
       src="https://kit.fontawesome.com/2897114d8c.js"
@@ -22,17 +22,18 @@
     <link rel="stylesheet" href="join.css" />
 
     <title>쪼~인~!</title>
-</head>
-<body>
+  </head>
+  <body>
     <!-- header & nav -->
     <header>
-      <section class="header">
-        <div class="header_logo">
+      <div id="headercontainer">
+      <div class="header">
+        <div OnClick="location.href ='index.html'"
+        class="header_logo">
           <i class="fa-solid fa-square-binary"></i>
           <div class="logo_title">
             <span class="broder">오파랑 코딩할래?</span><span class="sister">누나랑 해도되고~</span>
           </div>
-          
         </div>
         <ul class="header_links">
           <li>
@@ -55,61 +56,94 @@
             ></a>
           </li>
         </ul>
-      </section>
+      </div>
 
       <nav class="navbar">
         <ul class="navbar_menu">
           <li><a id="team" href="index.html">Team</a></li>
-          <li><a id="members" href="memberCard.html">Members</a></li>
-          <li><a id="join" href="join.html">Join</a></li>
+          <li><a id="members" href="members.html">Members</a></li>
+          <li><a id="join" href="join.html">Join Us</a></li>
           <li><a id="news" href="news.html">News</a></li>
         </ul>
       </nav>
-    </header>
+    </div>
+  </div></header>
 
     <!-- content -->
     <main>
       <div class="container">
-          <div class="box">
-            <div class="teamname"><span>오파 누나랑 </span><span> 코딩할 사람~ 손!</span></div>
-            <div class="input-group mb-3">
-              <span class="input-group-text">사진</span>
-              <input id="image" type="text" class="form-control" placeholder="Picture URL">
-            </div>
-            <div class="input-group mb-3">
-              <span class="input-group-text">너의 이름은?</span>
-              <input id="name" type="text" class="form-control" placeholder="User name">
-            </div>
-            <div class="input-group mb-3">
-              <span class="input-group-text">MBTI</span>
-              <input id="mbti" type="text" class="form-control" placeholder="MBTI">
-            </div>
-            <div class="input-group mb-3">
-              <span class="input-group-text">블로그</span>
-              <input id="blog URL" type="text" class="form-control" placeholder="Blog">
-            </div>
-            <div class="input-group mb-3">
-              <span class="input-group-text">Git</span>
-              <input id="github" type="text" class="form-control" placeholder="GitHub">
-            </div>
-            <div class="input-group mb-3">
-              <span class="input-group-text">한 줄 소개</span>
-              <input id="scontent" type="text" class="form-control" placeholder="간단한 소개를 해주세요">
-            </div>
-            <div class="input-group">
-              <span class="input-group-text">길게 한 말씀</span>
-              <textarea id="bcontent" class="form-control" placeholder="긴 소개내용을 넣을까요? 저는 5조의 서기를 했구요~ JS는 다른분이 할꺼에요~ CSS 화이팅!"></textarea>
-            </div>
-
+        <div class="box">
+          <div class="teamname">
+            <span>오파 누나랑 </span><span> 코딩할 사람~ 손!</span>
           </div>
-          <div class="d-grid gap-2">
-            <button id="joinbtn" class="btn btn-info">합류하기</button>
+          <div class="input-group mb-3">
+            <span class="input-group-text">사진</span>
+            <input
+              id="image"
+              type="text"
+              class="form-control"
+              placeholder="Picture URL"
+            />
           </div>
-
+          <div class="input-group mb-3">
+            <span class="input-group-text">너의 이름은?</span>
+            <input
+              id="name"
+              type="text"
+              class="form-control"
+              placeholder="User name"
+            />
+          </div>
+          <div class="input-group mb-3">
+            <span class="input-group-text">MBTI</span>
+            <input
+              id="mbti"
+              type="text"
+              class="form-control"
+              placeholder="MBTI"
+            />
+          </div>
+          <div class="input-group mb-3">
+            <span class="input-group-text"><i class="fa-brands fa-blogger-b"></i>블로그</span>
+            <input
+              id="blog URL"
+              type="text"
+              class="form-control"
+              placeholder="Blog"
+            />
+          </div>
+          <div class="input-group mb-3">
+            <span class="input-group-text"><i class="fa-brands fa-github"></i>GitHub</span>
+            <input
+              id="github"
+              type="text"
+              class="form-control"
+              placeholder="GitHub URL"
+            />
+          </div>
+          <div class="input-group mb-3">
+            <span class="input-group-text">좌우명</span>
+            <input
+              id="scontent"
+              type="text"
+              class="form-control"
+              placeholder="내 좌우명, 인생목표!"
+            />
+          </div>
+          <div class="input-group">
+            <span class="input-group-text">길게 한 말씀</span>
+            <textarea
+              id="bcontent"
+              class="form-control"
+              placeholder="긴 소개내용을 넣을까요? 저는 5조의 서기를 했구요~ JS는 다른분이 할꺼에요~ CSS 화이팅!"
+            ></textarea>
+          </div>
+        </div>
+        <div class="d-grid gap-2">
+          <button id="joinbtn" class="btn btn-info">합류하기</button>
+        </div>
       </div>
-
     </main>
     <script src="join.js" type="module"></script>
-
-</body>
+  </body>
 </html>
