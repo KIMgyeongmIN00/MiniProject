@@ -7,3 +7,4 @@ document.querySelectorAll('.memberCard').forEach(card => {
     }
   });
 });
+
