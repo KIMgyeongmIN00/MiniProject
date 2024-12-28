@@ -120,6 +120,7 @@ main {
 
 #cardSlot {
   width: 80%;
+  max-width: 1000px;
   margin-top: 30px;
   padding: 20px;
   border: 1px rgba(27, 146, 255, 1);
@@ -131,6 +132,7 @@ main {
   flex-flow: column nowrap;
   align-items: stretch;
   justify-content: center;
+  interpolate-size : allow-keywords;
 }
 
 
@@ -150,53 +152,70 @@ main {
   }
 }
 
+
 .card.opened {
     width: 100%;
     max-width: inherit;
-    height: auto;
+    max-height: 1800px;
     border: 2px solid #000;
     border-radius: 8px;
-    padding: 16px;
+    padding: 40px;
     margin: 16px auto;
     font-family: Arial, sans-serif;
     background-color: #fff;
     box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.1);
-    grid-gap: 12px;
-    grid-template-columns: 1fr 2fr 2fr 1fr;
     transition: all 0.3s ease-in-out;
-    flex-wrap: nowrap;
 }
 
 .card {
     width: 100%;
+    overflow-x: clip;
     max-width: inherit;
-    height: 300px;
+    max-height: 370px;
     border: 2px solid #000;
     border-radius: 8px;
-    padding: 16px;
+    padding: 40px;
     margin: 16px auto;
     font-family: Arial, sans-serif;
     background-color: #fff;
     box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.1);
-    grid-gap: 12px;
-    grid-template-columns: 1fr 2fr 2fr 1fr;
-    transition: all 0.3s ease-in-out;
+    transition: max-height 0.3s ease-in-out;
+    overflow: hidden;
     flex-wrap: nowrap;
+    font-family: "Noto Sans KR", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
 }
 
-/* 이미지 섹션 */
-.card .image {
-    grid-area: image;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #ffe08a;
-    border: 2px solid #ccc;
-    border-radius: 4px;
-    padding: 8px;
-    text-align: center;
-    font-weight: bold;
+.odd .introImg {
+  display: grid;
+  grid-template-areas:
+  "image name mbti"
+  "image blog blog"
+  "image github github";
+  grid-template-columns: auto auto 1fr;
+  grid-auto-rows: min-content;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 16px;
 }
+
+
+.even .introImg {
+  display: grid;
+  grid-template-areas:
+      "name mbti image"
+      "blog blog image"
+      "github github image";
+  grid-template-columns: 1fr auto auto;
+  grid-auto-rows: min-content;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 16px;
+}
+
+
 
 
 .odd {
@@ -204,68 +223,174 @@ main {
     text-align: left;
     margin-left: 0;
     margin-right: auto;
+    width: 100%;
+    overflow: hidden;
 }
+
 
 .even {
     align-items: flex-end;
     text-align: right;
     margin-left: auto;
     margin-right: 0;
+    width: 100%;
+    overflow: hidden;
 }
 
 img {
-    width : 150px;
-    height : 150px;
+    width : 200px;
+    height : 200px;
+    grid-area: image;
+    border: 1px solid black;
+    border-radius: 8px;
+    transition: width 0.3s ease-in-out, height 0.3s ease-in-out;
+}
+
+.name {
+  grid-area: name;
+  font-family: "Noto Sans KR", serif;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-size: 38px;
+  font-style: normal;
+}
+
+.mbti {
+  grid-area: mbti;
+  font-family: "Noto Sans KR", serif;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-size: 38px;
+  font-style: normal;
+}
+
+.blog {
+  grid-area: blog;
+}
+
+.github {
+  grid-area: github;
+}
+
+@media screen and (max-width: 768px) {
+  .even .introImg {
+      grid-template-columns: 1fr;
+      grid-template-areas:
+          "image"
+          "name"
+          "mbti"
+          "blog"
+          "github";
+      justify-content: center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .odd .introImg {
+      grid-template-columns: 1fr;
+      grid-template-areas:
+          "image"
+          "name"
+          "mbti"
+          "blog"
+          "github";
+      justify-content: center;
+  }
 }
 
 .opened img{
-    width: 250px;
-    height: 250px;
+    width: 350px;
+    height: 350px;
 }
 
 #input {
     display : none;
 }
 
-.extendBtn{
-    
+.extendBtn,
+.saveBtn,
+.deleteBtn,
+.editBtn
+{
+    padding-top: 5px;
+    width: auto;
+    height: 30px;
+    border-radius: 50%;
+    background-color: lightblue;
 }
 
 .odd .extendBtn{
-    position: absolute; /* 카드 안에서 고정 */
-    top: 8px; /* 카드 상단에서 8px */
-    right: 8px; /* 카드 오른쪽에서 8px */
+    position: absolute;
+    bottom: 16px;
+    right: 16px;
     display: flex;
     flex-direction: column;
     gap: 8px;
 }
-.odd .extendBtn{
-    position: absolute; /* 카드 안에서 고정 */
-    top: 8px; /* 카드 상단에서 8px */
-    right: 8px; /* 카드 오른쪽에서 8px */
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
+.odd .saveBtn{
+  position: absolute;
+  top: 16px;
+  right: 58px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
-.odd .extendBtn{
-    position: absolute; /* 카드 안에서 고정 */
-    top: 8px; /* 카드 상단에서 8px */
-    right: 8px; /* 카드 오른쪽에서 8px */
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-}
-
-.odd{
-    width: 100%;
-    overflow: hidden;
+.odd .editBtn{
+  position: absolute;
+  top: 16px;
+  right: 58px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
-.even{
-    width: 100%;
-    overflow: hidden;
+.odd .deleteBtn{
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
-.editable label {
-    display: none;
+.even .extendBtn{
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.even .saveBtn{
+position: absolute;
+top: 16px;
+left: 58px;
+display: flex;
+flex-direction: column;
+gap: 8px;
+}
+.even .editBtn{
+position: absolute;
+top: 16px; 
+left: 58px;
+display: flex;
+flex-direction: column;
+gap: 8px;
+}
+
+.even .deleteBtn{
+position: absolute;
+top: 16px; 
+left: 16px;
+display: flex;
+flex-direction: column;
+gap: 8px;
+}
+
+[data-field="name"] {
+  margin-bottom: 0;
+}
+
+[data-field="mbti"] {
+  margin-bottom: 0;
 }

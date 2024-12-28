@@ -71,31 +71,20 @@ if (!querySnapshot.empty) {
         let temp_html = `            
         <div class="card" id='card-${docId}' data-index='${idx}' data-id="${docId}">
         <div class="" id='checknum${idx}' data-turn='${idx}'>
-        <p class="introImg">
-                    <img src="${image}" alt="내 사진">
-                </p>
+        <div class="introImg">
+            <img src="${image}" alt="내 사진">
+            <label class="name" for="Name"><p contenteditable="false" class="editable " data-field="name" data-id="${docId}" placeholder="이름">${name}</p></label>
+            <label class="mbti" for="modMbti"><p contenteditable="false" class="editable " data-field="mbti" data-id="${docId}" placeholder="MBTI">${mbti}</p></label>
+            <label class="blog" for="modBlog"><i class="fa-brands fa-blogger-b"></i><p contenteditable="false" class="editable " data-field="blog" data-id="${docId}" placeholder="블로그 주소"><a href="${blog}">${blog}</a></p></label>
+            <label class="github" for="modGithub"><i class="fa-brands fa-github"></i><p contenteditable="false" class="editable " data-field="github" data-id="${docId}" placeholder="git 주소"><a href="${github}">${github}</a></p></label>
+            
+            </div>
         <div class="">
             <p contenteditable="false" class="editable URL" data-field="image" data-id="${docId}" placeholder="사진" style="display:none">${image}</p>
         </div>
         <div class="">
-            <label for="Name">이름</label>
-            <p contenteditable="false" class="editable " data-field="name" data-id="${docId}" placeholder="이름">${name}</p>
-        <div class="">
-            <label for="modMbti">MBTI</label>
-            <p contenteditable="false" class="editable " data-field="mbti" data-id="${docId}" placeholder="MBTI">${mbti}</p>
-        </div>
-        </div>
-        <div class="">
-            <label for="modScon">간단 소개</label>
-            <p contenteditable="false" class="editable " data-field="scontent" data-id="${docId}" placeholder="간단 소개">${scontent}</p>
-        </div>
-        <div class="">
-            <label for="modBlog">블로그 주소</label>
-            <p contenteditable="false" class="editable " data-field="blog" data-id="${docId}" placeholder="블로그 주소">${blog}</p>
-        </div>
-        <div class="">
-            <label for="modGithub">github 주소</label>
-            <p contenteditable="false" class="editable " data-field="github" data-id="${docId}" placeholder="git 주소">${github}</p>
+            <label for="modScon">좌우명</label>
+            <p contenteditable="false" class="editable " data-field="scontent" data-id="${docId}" placeholder="좌우명">${scontent}</p>
         </div>
         <div class="">
             <label for="modBcon">자기 소개</label>
